@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <span>Kareem Amara</span>
+    </nav>
+    <div class="aside-navbar">
+      <h1><span>CRUD</span> SYSTEM</h1>
+      <ul>
+        <li>
+          <button>Products</button>
+        </li>
+      </ul>
+    </div>
+    <div class="right-side">
+      <div class="inputs-container">
+        <div id="searchDiv">
+          <input
+            onkeyup="searchProducts(this.value)"
+            type="text"
+            placeholder="Search By Category Or Name"
+          />
+        </div>
+        <div>
+          <label for="productName">Product Name</label>
+          <br />
+          <input id="productName" type="text" placeholder="Product Name" />
+        </div>
+        <div>
+          <label for="productPrice">Product Price</label>
+          <br />
+          <input id="productPrice" type="number" placeholder="Product Price" />
+        </div>
+        <div>
+          <label for="productDescription">product-description</label>
+          <br />
+          <input
+            id="productDescription"
+            type="text"
+            placeholder="Product Description"
+          />
+        </div>
+        <div>
+          <label for="quantity">Quantity</label>
+          <br />
+          <select id="quantity">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div>
+          <label for="productCategory">Product Category</label>
+          <br />
+          <input
+            id="productCategory"
+            type="text"
+            placeholder="Product Category"
+          />
+        </div>
+        <div id="saveUpdate">
+          <button id="addProduct" value="Add Product" onclick="checkInputs()">Add Product</button>
+          <button id="clearAllBtn" onclick="clearAllProducts()">
+            Clear All Products
+          </button>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Product Name</th>
+              <th>Product Price</th>
+              <th>Product Category</th>
+              <th>Product Description</th>
+              <th>Product Quantity</th>
+              <th>Edit Button</th>
+              <th>Delete Button</th>
+            </tr>
+          </thead>
+          <tbody id="productsTable"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

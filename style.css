@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Open+Sans:wght@300;400;500;600;700;800&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  font-family: "Rubik", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+  --gray-color: #dddddd;
+  --dark-color: #211f2a;
+  --black-color: #000000;
+  --light-gray-color: #8e9196;
+  --box-shadow: rgba(99, 99, 99, 0.2);
+  --input-border-bottom-color: #a1a0a7;
+  --text-placeholder-color: #63808c;
+  --addproduct-button-color: #f35e6d;
+  --button-drop-shadow: ;
+  --white-color: #fff;
+  --yellow-color: #fec009;
+  --navbar-background: #2d2c36;
+}
+nav {
+  width: 100%;
+  padding: 20px 0px;
+  /* padding-right: 57px; */
+  position: absolute;
+  background: var(--navbar-background);
+  display: flex;
+  justify-content: flex-end;
+  color: var(--white-color);
+  font-weight: 450;
+  font-size: 1.5rem;
+}
+nav span {
+  margin-right: 58px;
+}
+
+ul {
+  list-style: none;
+}
+body {
+  display: flex;
+  flex-wrap: wrap;
+  background: #2d2c36;
+  height: calc(100% - 20px);
+  overflow-x: hidden;
+}
+.aside-navbar {
+  height: 111.7vh;
+  width: 20%;
+  background: #2d2c36;
+  position: relative;
+  border-top-right-radius: 20px;
+  box-shadow: var(--dark-color) 6px 1px 2px 0px;
+}
+
+.aside-navbar h1 {
+  color: var(--white-color);
+  font-weight: 400;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.aside-navbar h1 span {
+  color: var(--addproduct-button-color);
+  font-weight: 500;
+}
+#saveUpdate {
+  margin-bottom: 50px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 96%;
+  color: var(--white-color);
+}
+
+td,
+th {
+  border: 1px solid var(--gray-color);
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: var(--dark-color);
+}
+
+.update-btn {
+  margin-top: 5px;
+}
+.right-side {
+  display: flex;
+  padding-top: 6%;
+  flex-direction: column;
+  width: 80%;
+  height: 100vh;
+  background-color: var(--dark-color);
+  border-top-left-radius: 10px;
+}
+.inputs-container {
+  /* box-shadow: var(--box-shadow) 0px 2px 8px 0px; */
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.inputs-container div label {
+  color: var(--light-gray-color);
+  margin-bottom: 20px;
+}
+
+.inputs-container div input {
+  background: rgba(0, 0, 0, 0.419);
+  width: 95%;
+  margin: 0 auto;
+  padding: 10px;
+  border: none;
+  border-bottom: 1.8px solid var(--input-border-bottom-color);
+  margin-bottom: 20px;
+  padding-left: 5px;
+}
+.inputs-container div:nth-child(3) input[type="number"] {
+  color: white;
+}
+
+.inputs-container div input[type="text"],
+.inputs-container div:nth-child(3) input[type="text"] {
+  color: var(--white-color);
+  padding-left: 5px;
+}
+
+.inputs-container div input:focus {
+  outline: none;
+}
+
+#searchDiv input {
+  width: 95%;
+  margin-top: 20px;
+  margin: 0 auto;
+  padding: 10px;
+  border: none;
+  border-bottom: 1.8px solid var(--input-border-bottom-color);
+  margin-bottom: 20px;
+  padding-left: 0px;
+}
+
+#searchDiv input:focus {
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+#quantity {
+  margin: 10px 0px;
+  border-radius: 10%;
+  width: 40px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#quantity:focus {
+  outline: none;
+}
+.inputs-container div input::placeholder,
+#searchDiv input::placeholder {
+  color: var(--text-placeholder-color);
+  text-transform: capitalize;
+  font-style: initial;
+  padding-left: 5px;
+}
+#clearAllBtn,
+#addProduct,
+.delete-btn,
+.update-btn,
+.aside-navbar ul li button,
+.update-btn {
+  padding: 12px 14px;
+  text-transform: capitalize;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: var(--white-color);
+  font-weight: 500;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+#addProduct {
+  background-color: var(--addproduct-button-color);
+  margin-right: 40px;
+}
+
+#clearAllBtn {
+  background-color: rgb(250, 86, 5);
+}
+
+.aside-navbar ul li {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.aside-navbar ul li button {
+  border-radius: 20px;
+  background-color: var(--dark-color);
+  width: 40%;
+  margin: 0 auto;
+}
+.delete-btn {
+  background-color: rgb(200, 18, 18);
+}
+
+.update-btn {
+  background: var(--yellow-color);
+}
+/* for tablet screens  */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav {
+    position: static;
+    background: #2d2c36;
+  }
+  nav span {
+    margin-right: 42px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .aside-navbar {
+    width: 80%;
+    margin: 0 auto;
+    height: 185px;
+    position: static;
+    display: block;
+    margin: 20px 0px;
+    border-radius: none;
+    box-shadow: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    background: #2d2c36;
+    text-align: center;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+  .right-side {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    border-top-left-radius: 0px;
+    height: 200vh;
+  }
+  .inputs-container {
+    padding-left: 10px;
+  }
+  .inputs-container #searchDiv input,
+  .inputs-container div input {
+    width: 95%;
+  }
+  .inputs-container div label {
+    font-size: 0.8rem;
+  }
+
+  .inputs-container div input::placeholder {
+    font-size: 0.7rem;
+  }
+
+  #saveUpdate #addProduct {
+    margin-right: 20px;
+  }
+  table {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+  }
+  tbody,
+  thead {
+    float: left;
+  }
+ 
+
+  td,
+  th {
+    display: block;
+    width: 152%;
+  }
+  td {
+    width: 100%;
+    height: 19px;
+  }
+  tr th {
+    border-right: 0px;
+  }
+  
+  .update-btn,
+  .delete-btn {
+    margin-top: -3px;
+    padding: 5px 6px;
+  }
+}
+
+/* for mobile screens */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav {
+    position: static;
+    background: #2d2c36;
+  }
+  nav span {
+    margin-right: 42px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .aside-navbar {
+    width: 80%;
+    margin: 0 auto;
+    height: 185px;
+    position: static;
+    display: block;
+    margin: 20px 0px;
+    border-radius: none;
+    box-shadow: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    background: #2d2c36;
+    text-align: center;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+  .right-side {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    border-top-left-radius: 0px;
+    height: 190vh;
+  }
+  .inputs-container {
+    padding-left: 10px;
+  }
+  .inputs-container #searchDiv input,
+  .inputs-container div input {
+    width: 95%;
+  }
+  .inputs-container div label {
+    font-size: 0.8rem;
+  }
+
+  .inputs-container div input::placeholder {
+    font-size: 0.7rem;
+  }
+
+  #saveUpdate #addProduct {
+    margin-right: 20px;
+  }
+  table{
+    display: flex;
+  }
+  tbody,
+  thead {
+    float: left;
+  }
+ 
+  td,
+  th {
+    display: flex;
+ 
+  }
+  td {
+    height: 19px;
+  }
+  tr th {
+    border-right: 0px;
+    white-space: nowrap;
+  }
+  .update-btn,
+  .delete-btn {
+    margin-top: -3px;
+    padding: 5px 6px;
+  }
+  /* ==================== */
+  /* table {
+    border-collapse: collapse;
+  }
+  table tr {
+    display: flex;
+    flex-direction: column;
+  } */
+  /* ================= */
+  /* table thead tr th {
+    display: block;
+  }
+  table tbody tr td {
+    display: block;
+  } */
+}
